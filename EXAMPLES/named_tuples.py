@@ -1,6 +1,7 @@
 from collections import namedtuple
 from pprint import pprint
 
+#                   class name | field names
 Knight = namedtuple('Knight', 'name title color quest comment') # create named tuple class with specified fields (could also provide fieldnames as iterable)
 
 k = Knight('Bob', 'Sir', 'green', 'whirled peas', 'Who am i?') # create named tuple instance (must specify all fields)

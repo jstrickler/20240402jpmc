@@ -8,6 +8,12 @@ class StringKeyDict(dict):  # Create class that inherits from dict
             # Raise error if non-string key is used
             raise TypeError(f"Keys must be strings not {type(key).__name__}s")
 
+class ReadOnlyDict(dict):
+    def __setitem__(self, key, value):
+        if key in self:
+            raise ValueError("Cannot overwrite existing key")
+        else:
+            super().__setitem__(key, value)
 
 if __name__ == '__main__':
     d = StringKeyDict(a=10, b=20)   # Create and initialize StringKeyDict instance
@@ -22,3 +28,11 @@ if __name__ == '__main__':
 
     print()
     print(d)
+
+    rod = ReadOnlyDict()
+    rod['blue'] = 5
+    rod['red'] = 10
+    print(f"{rod = }")
+    rod['blue'] = 19
+
+    

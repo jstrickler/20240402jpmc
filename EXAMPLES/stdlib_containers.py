@@ -26,7 +26,7 @@ print('-' * 60)
 
 # deque
 d = deque()  # Create an empty deque
-for c in 'abcdef':
+for c in 'abcdef':  # for obj in any_iterable: d.append(obj)
     d.append(c)   # Append to the deque
 print(d)
 for c in 'ghijkl':
