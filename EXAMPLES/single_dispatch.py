@@ -71,3 +71,4 @@ if __name__ == "__main__":
 
     print(f"sum(x): {sum(x)}")  # every element is a number
     
+    add_number(x, [1,2,3])
