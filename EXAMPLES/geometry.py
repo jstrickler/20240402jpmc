@@ -8,10 +8,14 @@ area = rectangle_area(length, width)
 area = square_area(side)
 """
 import math   # load math.py
+import typing as T
+from typing import Union
+
+Number = Union[int, float]
 
 PI = math.pi
 
-def circle_area(diameter):
+def circle_area(diameter: Number) -> float:
     """
     Compute the area of a circle from a given diameter
 
@@ -21,7 +25,7 @@ def circle_area(diameter):
     radius = diameter / 2
     return PI * (radius ** 2)
 
-def rectangle_area(length, width):
+def rectangle_area(length: Number, width: Number) -> Number:
     """
     Compute the area of a rectangle.
 
@@ -39,6 +43,10 @@ def square_area(side):
     :return: Area of square
     """
     return side ** 2
+
+def spam(*things: int) -> str:
+    return ""
+
 
 if __name__ == "__main__":
     area1 = square_area(15)

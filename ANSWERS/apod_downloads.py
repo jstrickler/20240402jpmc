@@ -1,6 +1,12 @@
 import time
 from multiprocessing.dummy import Pool
+import sys
+for path in sys.path:
+    print(path)
+print()
 from apod import fetch_apod
+
+
 
 DATES = [f'2023-01-{day:02d}' for day in range(1, 32)]
 
