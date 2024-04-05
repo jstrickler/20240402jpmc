@@ -1,11 +1,14 @@
 
 fruits = ['watermelon', 'apple', 'mango', 'kiwi', 'apricot', 'lemon', 'guava']
 
+#  f = [fruit.upper() for fruit in fruits]  list comprehension
 ufruits = (fruit.upper() for fruit in fruits)  # These are all exactly like the list comprehension example, but return generators rather than lists
 afruits = (fruit.title() for fruit in fruits if fruit.startswith('a'))
+print(f"{ufruits = }")
+print(f"{afruits = }")
 
-print("ufruits:", " ".join(ufruits))
-print("afruits:", " ".join(afruits))
+print("ufruits:", list(ufruits))
+print("afruits:", list(afruits))
 print()
 
 values = [2, 42, 18, 92, "boom", ['a', 'b', 'c']]

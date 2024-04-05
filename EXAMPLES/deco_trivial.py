@@ -1,3 +1,4 @@
+from deco_timestamp import log_timestamp
 
 def void(thing_being_decorated):
     return 42  # replace function with 42
@@ -8,6 +9,8 @@ x = void(name)  # decorate 'name', which is now 42, not a string
 @void  # decorate hello() function
 def hello():
     print("Hello, world")
+
+# hello = void(hello)
 
 @void  # decorate howdy() function
 def howdy():
