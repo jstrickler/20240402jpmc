@@ -1,4 +1,3 @@
-
 from threading import Thread, Lock
 import random
 import time
@@ -10,8 +9,9 @@ def my_task(num):  # function to run in each thread
     with STDOUT_LOCK:
         print(f"Hello from thread {num}")
 
+NUMBER_OF_THREADS = 5
 
-for i in range(16):
+for i in range(NUMBER_OF_THREADS):
     t = Thread(target=my_task, args=(i,))  # create thread
     t.start()  # launch thread
 
